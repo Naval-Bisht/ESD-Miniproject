@@ -76,6 +76,8 @@ const HostelList = () => {
     fetchHostels();
   }, [navigate]);
 
+
+
   const applyFilters = useCallback(() => {
     let filtered = hostels;
     if (filters.availability !== "all") {
@@ -103,9 +105,12 @@ const HostelList = () => {
     setFilteredHostels(filtered);
   }, [filters, hostels]);
 
+
+
   useEffect(() => {
     applyFilters();
   }, [applyFilters]);
+
 
   const handleFilterChange = (event) => {
     const { name, value } = event.target;
@@ -118,6 +123,7 @@ const HostelList = () => {
     window.location.href = "/Home/update";
   };
 
+  
   return (
     <div className="mainhostel">
       <Header />
